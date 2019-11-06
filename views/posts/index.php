@@ -20,7 +20,7 @@
 </form> 
 <?php
 echo '<br><br><div><h2>WORKS LIST</h2></div>';
-echo '<div><a href="index.php?controller=posts&action=addPost">ADD WORK</a></div>';
+echo '<div class="text-right"><a href="index.php?controller=posts&action=addPost">ADD WORK</a></div>';
 echo '<div><table class="table">';
 echo '<tr>
 		<th>Work Name</th>
@@ -28,6 +28,7 @@ echo '<tr>
 		<th>Ending Date</th>
 		<th>Status</th>
 		<th>Action</th>
+		<th></th>
 </tr>';
 foreach ($posts as $post) {
 	echo '<tr>

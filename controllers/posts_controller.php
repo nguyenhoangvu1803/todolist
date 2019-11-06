@@ -66,4 +66,5 @@ class PostsController extends BaseController
 		$this->render('save', $data);
 	}
 }
-?>
+
+

@@ -7,25 +7,25 @@ class Post
 	public $ending_date;
 	public $status;
 
-	function __construct($id, $work_name, $starting_date, $ending_date, $status)
+	function __construct($id, $workName, $startingDate, $endingDate, $status)
 	{
 		$this->id = $id;
-		$this->work_name = $work_name;
-		$this->starting_date = $starting_date;
-		$this->ending_date = $ending_date;
+		$this->work_name = $workName;
+		$this->starting_date = $startingDate;
+		$this->ending_date = $endingDate;
 		$this->status = $status;
 	}
 
-	static function all($find_form_date,$find_to_date)
+	static function all($findFormDate,$findToDate)
 	{
 		$list = [];
 		$sql = 'SELECT * FROM works';
-		if(!empty($find_form_date) && $find_to_date) {
-			$sql = 'SELECT * FROM works WHERE starting_date  >= :find_form_date AND ending_date <= :find_to_date';
+		if(!empty($findFormDate) && $findToDate) {
+			$sql = 'SELECT * FROM works WHERE starting_date  >= :findFormDate AND ending_date <= :findToDate';
 			$db = DB::getInstance();
 			$req = $db->prepare($sql);
-			$req->bindParam(":find_form_date", $find_form_date);
-			$req->bindParam(":find_to_date", $find_to_date);
+			$req->bindParam(":findFormDate", $findFormDate);
+			$req->bindParam(":findToDate", $findToDate);
 			$req->execute();
 		} else {
 			$db = DB::getInstance();
@@ -94,4 +94,4 @@ class Post
 		return null;
 	}
 }
-?>
+
