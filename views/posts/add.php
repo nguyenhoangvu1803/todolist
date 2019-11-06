@@ -1,3 +1,5 @@
+<div class='py-5'>
+<h2>Add new work</h2>
 <?php 
 	$id = '';
 	$work_name = '';
@@ -37,3 +39,6 @@
 	<br>
 	<input type="submit" value="Submit" />
 </form> 
+<br>
+<a href="index.php?controller=posts">Back to list</a>
+</div>

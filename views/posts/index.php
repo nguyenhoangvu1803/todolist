@@ -1,3 +1,4 @@
+<div class='py-5'>
 <?php
 	if(isset($notice)) echo $notice;
 ?>
@@ -18,9 +19,9 @@
 	?>
 </form> 
 <?php
-echo '<div><h2>WORKS LIST</h2></div>';
+echo '<br><br><div><h2>WORKS LIST</h2></div>';
 echo '<div><a href="index.php?controller=posts&action=addPost">ADD WORK</a></div>';
-echo '<table>';
+echo '<div><table class="table">';
 echo '<tr>
 		<th>Work Name</th>
 		<th>Starting Date</th>
@@ -45,5 +46,6 @@ foreach ($posts as $post) {
 	<td><a href="index.php?controller=posts&id=' . $post->id . '">Delete</a></td>
   </tr>';
 }
-echo '</table>';
+echo '</table></div>';
 ?>
+</div>
