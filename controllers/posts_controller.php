@@ -1,4 +1,5 @@
 <?php
+
 require_once('controllers/base_controller.php');
 require_once('models/post.php');
 

@@ -16,7 +16,7 @@ class Post
 		$this->status = $status;
 	}
 
-	static function all($findFormDate,$findToDate)
+	public function all($findFormDate,$findToDate)
 	{
 		$list = [];
 		$sql = 'SELECT * FROM works';
@@ -39,7 +39,7 @@ class Post
 		return $list;
 	}
 	
-	static function add($param)
+	public function add($param)
 	{
 		if(!empty($param['id'])) 
 		{
@@ -66,7 +66,7 @@ class Post
 		return null;
 	}
 	
-	static function find($id)
+	public function find($id)
 	{
 		$db = DB::getInstance();
 		$data = [
@@ -82,7 +82,7 @@ class Post
 		return null;
 	}
 	
-	static function del($id)
+	public function del($id)
 	{
 		$db = DB::getInstance();
 		$data = [

@@ -22,4 +22,3 @@ class PagesController extends BaseController
 	}
 }
 
-?>
